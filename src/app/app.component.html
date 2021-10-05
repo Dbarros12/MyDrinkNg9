@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light nav-padding ">
+  <a class="navbar-brand text-black-50" routerLink="/home">
+    <img src="../assets/img/Logo-nav.png" class="logo" alt="Logo">
+    <span class="sr-only">(current)</span></a>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/produtos" routerLinkActive="activebutton">Produtos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/carrinho" routerLinkActive="activebutton">Carrinho</a>
+      </li>
+    </ul>
+    <div class="col-md-3">
+      <a class="signIn" routerLink="/cadastro">criar conta </a>
+      <button class="btn btn-light bt" routerLink="/login">Entrar</button>
+    </div>
+
+
+<!--    <ul class="navbar-nav my-2 my-lg-0">-->
+<!--      <li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle text-white" style="margin-right: 8rem;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--          User-->
+<!--        </a>-->
+<!--        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--          <a class="dropdown-item" [routerLink]="['/perfil']">Perfil</a>-->
+<!--          <a class="dropdown-item" [routerLink]="['/configuracoes']">Configurações</a>-->
+<!--          <a class="dropdown-item" [routerLink]="['/login']">Sair</a>-->
+<!--        </div>-->
+<!--      </li>-->
+<!--    </ul>-->
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,60 @@
+<div class="container-fluid" style="margin-top: 2%">
+  <form>
+      <div class="col-md-6 border-right " >
+            <div class="col-md-6 margem">
+              <label for="nomeProduto">Produto</label>
+              <input type="text" class="form-control" placeholder="Nome do produto"  [(ngModel)]="produto.nomeProduto" id="nomeProduto"  name="nomeProduto">
+            </div>
+
+            <div class="col-md-6 margem">
+              <label for="categoriaProduto">Categoria</label>
+              <select class="form-control" id="exampleFormControlSelect1"  [(ngModel)]="produto.categoriaProduto" id="categoriaProduto"  name="categoriaProduto">
+                <option>Selecione</option>
+                <option>Quente</option>
+                <option>Fria</option>
+                <option>Utilitário</option>
+              </select>
+            </div>
+      </div>
+
+      <div class="col-md-6 border-right">
+            <div class="col-md-3 margem">
+              <label for="precoProduto">Preço R$</label>
+              <input type="currency" class="form-control" placeholder="Preço" [(ngModel)]="produto.precoProduto" id="precoProduto"  name="precoProduto">
+            </div>
+          <div class="col-md-6 margem">
+
+            <label style="margin-right: 1%">Em Estoque? </label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" laceholder="Preço" [(ngModel)]="produto.isAvaliable" id="isAvaliable"  name="isAvaliable"value="Sim">
+              <label class="form-check-label" for="isAvaliable" >Sim</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio"[(ngModel)]="produto.isAvaliable" id="NotAvaliable"  name="NotAvaliable"value="Não">
+              <label class="form-check-label" for="NotAvaliable">Não</label>
+            </div>
+
+          </div>
+      </div>
+
+      <div class="col-md-6 border-right ">
+        <div class="col col-md-6  margem">
+          <label for="descricaoProduto">Descrição</label>
+          <textarea type="currency" class="form-control" placeholder="Descrição" [(ngModel)]="produto.descricaoProduto" id="descricaoProduto"  name="descricaoProduto"></textarea>
+        </div>
+      </div>
+
+        <!--      <div class="form-group">-->
+        <!--        <label for="exampleFormControlFile1">Imagem do produto</label>-->
+        <!--        <input type="file" class="form-control-file" id="exampleFormControlFile1">-->
+        <!--      </div>-->
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-primary margem btn-margin" (click)="adicionarProduto()">Adicionar</button>
+    </div>
+<!--    <div class="spinner-grow text-primary" role="status">-->
+<!--      <span class="sr-only">Loading...</span>-->
+<!--    </div>-->
+  </form>
+
+</div>

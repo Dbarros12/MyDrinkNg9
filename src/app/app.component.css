@@ -1,0 +1,25 @@
+.nav-padding{
+  padding: 0%;
+  background-color: #3399FF;
+}
+
+.signIn{
+  color:#FFF;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+.logo{
+  max-width: 45%;
+  margin-left: 64px;
+}
+.bt{
+  border-radius: 10px;
+  color: #39f;
+  width: 40%;
+}
+
+
+
+

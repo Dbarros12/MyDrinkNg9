@@ -1,0 +1,23 @@
+<div class="header">
+  <h4>Login</h4>
+</div>
+
+<form class="form-login">
+
+  <div class="form-group">
+    <label for="emailCliente">E-mail</label>
+    <input type="email" class="form-control" [(ngModel)]="usuario.emailCliente" id="emailCliente" name="emailCliente" placeholder="E-mail">
+  </div>
+
+  <div class="form-group">
+    <label for="senhaCliente">Senha</label>
+    <input type="password" class="form-control" [(ngModel)]="usuario.senhaCliente" id="senhaCliente"  name="senhaCliente" placeholder="Senha">
+  </div>
+
+  <div class="form-group buttons">
+    <button type="submit" class="btn btn-primary" (click)="login()">Acessar</button>
+    <p class="ref"> Não possui conta?  faça  <a class="link" (click)="redirectToCadastro()">Cadastro</a> </p>
+  </div>
+
+</form>
+

@@ -1,0 +1,22 @@
+.header{
+  text-align: center;
+  padding-top: 5% ;
+}
+
+.form-login{
+  padding: 5% 30% 3% 30%;
+}
+
+.buttons{
+  text-align: center;
+}
+
+.ref{
+  margin-top: 3%;
+}
+.link{
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+

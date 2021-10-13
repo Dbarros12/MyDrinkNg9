@@ -5,6 +5,10 @@ export class AppConstants {
   }
 
   public static get baseLogin(): string {
+    return this.baseServidor + '/login';
+  }
+
+  public static get baseClientes(): string {
     return this.baseServidor + '/clientes';
   }
 

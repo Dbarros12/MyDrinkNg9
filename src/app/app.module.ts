@@ -15,8 +15,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos.component';
 import {AdicionarProdutosComponent} from './produtos/adicionar-produtos/adicionar-produtos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatDatepickerModule} from '@angular/material';
+import {HttpInterceptorModule} from './service/HeaderInterceptorService';
 
 
 
@@ -34,11 +33,11 @@ import {MatDatepickerModule} from '@angular/material';
     AdicionarProdutosComponent,
   ],
   imports: [
-    MatDatepickerModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    HttpInterceptorModule,
     BrowserAnimationsModule
   ],
   providers: [],

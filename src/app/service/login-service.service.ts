@@ -12,23 +12,23 @@ export class LoginServiceService {
   constructor(private http: HttpClient, private router: Router) {
   }
 
-  clientes: any = [];
-
   login(usuario) {
-    this.router.navigate(['home']);
+   console.log(JSON.stringify(usuario));
+
+   return this.http.post(AppConstants.baseLogin, JSON.stringify(usuario)).subscribe( data => {
+
+      var token = JSON.parse(JSON.stringify(data)).Authorization.split(' ')[1];
+
+      localStorage.setItem('token', token);
+
+      console.info('Token: ' + localStorage.getItem('token'));
+
+     this.router.navigate(['home']);
+
+    });
   }
 
-  cadastrar(usuario) {
-  return this.http.post(AppConstants.baseLogin + '/cadastrar-cliente', JSON.parse(JSON.stringify(usuario))).subscribe(data => {
-  }, response => {
-
-     if (response.status === 200) {
-       this.router.navigate(['home']);
-     } else {
-       return response.status;
-     }
-  });
-  }
+  //    this.router.navigate(['home']);
 
   listarClientes(): Observable<any> {
     return this.http.get(AppConstants.baseLogin + '/buscar-clientes');

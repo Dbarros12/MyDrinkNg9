@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginServiceService} from '../service/login-service.service';
 import {Router} from '@angular/router';
+import {CadastrarServiceService} from '../service/cadastrar-service.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -16,7 +17,7 @@ export class CadastroComponent implements OnInit {
     senhaCliente: '',
   };
 
-  constructor(private loginService: LoginServiceService, private router: Router) {
+  constructor(private cadastrarService: CadastrarServiceService, private router: Router) {
   }
 
   ngOnInit() {
@@ -26,8 +27,9 @@ export class CadastroComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
-  login() {
-    this.loginService.cadastrar(this.usuario);
+  cadastrar() {
+    console.log('Cliente: ' + JSON.stringify(this.usuario));
+    this.cadastrarService.cadastrar(this.usuario);
   }
 
 }
